@@ -1,0 +1,59 @@
+<div class="container mt-3" >
+        <div class="col-md-6 offset-md-3">
+            <form >
+                <div class="form-group" align="center">
+    
+                            <div style="margin-right: 100px;">
+                                <span style="color:#4F4F4F; font-size: 25px;font-family:roboto, sans-serif;">
+                                    Sign in with
+                                </span> 
+                                <button class="btn btn-primary active">
+                                    <i class="fa fa-facebook" aria-hidden="true" ></i>
+                                </button>
+                                <button class="button btn btn-primary active" >
+                                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                                </button>
+                                <button class="btn btn-primary active">
+                                    <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                </button>
+                            </div> 
+                              
+                                          
+    
+                        <div style="color:#4F4F4F; font-size: 20px;font-family:roboto, sans-serif; margin-top: 30px; margin-bottom: 30px;margin-right: 50px;font-weight: 500;" 
+                             align="center">
+                            Or
+                        </div>
+                       <div>
+                        <input type="text" class="form-control" placeholder="Email address" required
+                               [(ngModel)]="email" name="email"
+                               style="width: 350px;margin-bottom: 20px;">
+                         <div class="alert alert-danger " style="width: 340px; margin-top: -15px;"
+                              *ngIf="!email">
+                            Ce champ est obligatoire !!
+                        </div>
+                       </div>
+                       
+                       <div>
+                          <input type="password" class="form-control" placeholder="Password"
+                                 style="width: 350px;margin-bottom: 20px;">
+                       </div>
+                       
+                         <div style="margin-left: -220px;">
+                            <input class="form-check-input" type="checkbox"  id="selected"  > Remember me
+                         </div> <br>
+    
+                         <button class="btn btn-primary" (click)="login()">
+                             Login
+                        </button>
+      
+                        
+    
+                </div>
+            </form>
+        
+        </div>
+       
+   
+
+</div>

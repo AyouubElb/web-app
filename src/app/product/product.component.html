@@ -1,0 +1,88 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+          <div class="col-md-12">
+            <div class="row">
+              
+               <div class="col-md-6" style="margin-top: 10px;">
+                 <span style="font-weight:500; margin: 10px; font-size: 25px;">Products List</span>
+               </div>
+
+               <div class="col-md-6 " align="right">
+                 <button class="btn btn-outline-success" (click)="AddProduct()">Ajouter</button>
+               </div>
+              
+         </div>
+          </div>
+        
+        </div>
+        <div class="card-body">
+          <div class="row" style="margin-bottom:10px">
+            <form class="form-inline" >
+              <div class="col-md-7">
+                <div class="input-group">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                         name="first" [(ngModel)]="keyword" 
+                         (input)="applyFilter()">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit"
+                          >
+                    Search
+                  </button>
+                </div>
+              </div>        
+            </form>
+          </div>
+         
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">id</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Promo</th>
+                    <th scope="col"></th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let product of products">
+                    <th scope="row">{{product.id}}</th>
+                    <td>{{product.name}}</td>
+                    <td>{{product.price}}</td>
+                    <td>
+                      <div  >
+                        <button class="btn btn-outline-success" 
+                                *ngIf="product.promo == true"
+                                (click)="deletePromo(product)">
+                          <i class="fa fa-check-circle-o" aria-hidden="true"></i>
+                        </button>
+                        <button class="btn btn-outline-danger"
+                                *ngIf="product.promo != true"
+                                (click)="promo(product)">
+                          <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                        </button>
+                      </div>
+                    </td>
+                    <td style="padding-right:0px; margin-top: 0px;">
+                      <button class="btn btn-outline-danger" *ngIf="product.selected != true" (click)="select(product)">Unselected</button>
+                      <button class="btn btn-outline-success" *ngIf="product.selected == true" (click)="unSelect(product)">Selected</button>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-outline-danger"  (click)="deleteProduct(product)"
+                                style="margin:5px">
+                            <i class="fa fa-trash" aria-hidden="true"></i>
+                        </button>
+                        <button type="button" class="btn btn-outline-success"  (click)="editProduct(product)" >
+                          <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                      </button>
+                    </td>
+                    
+                  </tr>
+               
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+
+ 

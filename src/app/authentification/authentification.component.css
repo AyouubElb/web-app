@@ -1,0 +1,20 @@
+.btn.active {
+    width: 30px ;
+    height: 30px;
+    border-radius: 20px;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.form-group {
+    border: 1px solid lightgray;
+    padding: 50px 0px; 
+    background-color: whitesmoke;
+   
+    width: 420px
+}
+.btn-primary {
+    border-radius: 20px;
+    width:330px;
+}
+

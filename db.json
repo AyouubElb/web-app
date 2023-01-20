@@ -1,0 +1,19 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Computer",
+      "price": 6500
+    },
+    {
+      "id": 2,
+      "name": "Print",
+      "price": 1800
+    },
+    {
+      "id": 1,
+      "name": "jSmartPhone",
+      "price": 3000
+    }
+  ]
+}
